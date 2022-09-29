@@ -1,6 +1,7 @@
 require_relative "boot"
 
 require "rails/all"
+require_relative '../app/lib/exceptions/weather_forecast'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

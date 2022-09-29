@@ -6,3 +6,9 @@ en:
       "34°C e nublado em %{city} em 12/12. Média para os próximos dias: 32°C em 13/12, 25°C em 14/12, 29°C em 15/12, 33°C em 16/12 e 28°C em 16/12."
     es:
       "34°C e nublado em %{city} em 12/12. Média para os próximos dias: 32°C em 13/12, 25°C em 14/12, 29°C em 15/12, 33°C em 16/12 e 28°C em 16/12."
+
+  weather_forecast:
+    exceptions/empty_open_weather_key_exception:
+      Open Weather API key is empty
+    exceptions/empty_city_exception:
+      City is empty
