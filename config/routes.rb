@@ -3,4 +3,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  namespace :api, format: :json do
+    namespace :v1 do
+      resources :weather_forecasts, only: [] do
+        collection do
+          get :tweet
+        end
+      end
+    end
+  end
 end
