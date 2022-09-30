@@ -2,33 +2,30 @@
 
 module Twitter
   class CreateTweetService
-    attr_reader :open_weather_key, :city, :language
+    attr_reader :api_key, :city, :language
 
-    def initialize(open_weather_key:, city:, language: 'pt-br')
-      @open_weather_key = open_weather_key
+    def initialize(api_key: '76885553ca7a137fe0ccbbeb63547a21', city:, language: 'pt-br')
+      @api_key = api_key
       @city = city
       @language = language
     end
 
     def call
-      empty_open_weather_key_exception unless open_weather_key.present?
-      empty_city_exception unless city.present?
-
       create_tweet
     end
 
     private
 
     def create_tweet
-      I18n.t("tweet.#{language}", city: city)
+      weather_result
     end
 
-    def empty_open_weather_key_exception
-      raise Exceptions::EmptyOpenWeatherKeyException
-    end
-
-    def empty_city_exception
-      raise Exceptions::EmptyCityException
+    def weather_result
+      ::OpenWeatherClient::Handler.new(
+        api_key: api_key,
+        city: city,
+        language: language
+      ).call
     end
   end
 end

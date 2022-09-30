@@ -1,11 +1,11 @@
 en:
-  tweet:
+  current_weather:
     pt-br:
-      "34°C e nublado em %{city} em 12/12. Média para os próximos dias: 32°C em 13/12, 25°C em 14/12, 29°C em 15/12, 33°C em 16/12 e 28°C em 16/12."
+      "%{temp}°C em %{city} com %{weather_description}. Temperatura minima de %{temp_min}°C, temperatura maxima de %{temp_max}°C e sensação termica de %{feels_like}°C %{date_time}."
     en:
-      "34°C e nublado em %{city} em 12/12. Média para os próximos dias: 32°C em 13/12, 25°C em 14/12, 29°C em 15/12, 33°C em 16/12 e 28°C em 16/12."
+      "%{temp}°C in %{city} with %{weather_description}. Minimum temperature of %{temp_min}°C, maximum temperature of %{temp_max}°C and thermal sensation of %{feels_like}°C %{date_time}."
     es:
-      "34°C e nublado em %{city} em 12/12. Média para os próximos dias: 32°C em 13/12, 25°C em 14/12, 29°C em 15/12, 33°C em 16/12 e 28°C em 16/12."
+      "%{temp}°C en %{city} con %{weather_description}. Temperatura mínima de %{temp_min}°C, temperatura máxima de %{temp_max}°C y sensación térmica de %{feels_like}°C %{date_time}."
 
   weather_forecast:
     exceptions/empty_open_weather_key_exception:
